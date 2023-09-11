@@ -1,0 +1,11 @@
+string = input("Введіть слово: ")
+
+has_substitution = False  # Ініціалізуємо змінну, що вказуватиме на наявність підмін.
+for i in range(len(string)):  # Використовуйте range(len(string)) для ітерації по індексах у рядку.
+    if string[i] == "a" or string[i] == "o" or string[i] == "i":
+        has_substitution = True  # Якщо знайдено "a", "o" або "i", встановлюємо прапорець на наявність підмін.
+
+if has_substitution:
+    print("Виявлено підміну літер")
+else:
+    print("Підміни літер не виявлено")
