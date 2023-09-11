@@ -1,0 +1,20 @@
+# Функція, яка замінює літери в реченні їх ASCII-кодами
+def replace_letters_with_ascii(sentence):
+    result = ""
+    for char in sentence:
+        # Перевіряємо, чи символ є літерою
+        if char.isalpha():
+            # Отримуємо ASCII-код літери і додаємо його до результуючого рядка
+            result += str(ord(char))
+        else:
+            # Якщо символ не є літерою, просто додаємо його до результуючого рядка
+            result += char
+    return result
+
+# Запитуємо користувача ввести речення
+input_sen = input("Введіть речення: ")
+
+# Викликаємо функцію та виводимо результуюче речення з ASCII-кодами
+output_sen = replace_letters_with_ascii(input_sen)
+print("Результат з ASCII-кодами:", output_sen)
+
